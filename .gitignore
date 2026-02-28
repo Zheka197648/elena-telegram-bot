@@ -1,17 +1,20 @@
-# Секреты
+# Секреты и переменные окружения
 .env
 *.pem
+*.key
 
 # Кэш Python
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
+.Python
 
 # Виртуальное окружение
 venv/
 env/
 .venv/
+ENV/
 
 # IDE
 .idea/
@@ -19,3 +22,24 @@ env/
 *.swp
 *.swo
 *~
+.DS_Store
+
+# Логи
+*.log
+
+# База данных (если будет)
+*.db
+*.sqlite
+*.sqlite3
+
+# Загруженные файлы
+uploads/
+downloads/
+
+# Тесты
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Jupyter Notebook
+.ipynb_checkpoints
