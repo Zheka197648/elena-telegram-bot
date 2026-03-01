@@ -433,3 +433,4 @@ if __name__ == '__main__':
     thread.start()
 
     logger.info("🚀 Бот запущен на Hugging Face Spaces!")
+
