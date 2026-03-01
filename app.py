@@ -16,13 +16,11 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # === Переменные окружения ===
-BOT_TOKEN = os.getenv('BOT_TOKEN')
-ELENA_CHAT_ID = os.getenv('ELENA_CHAT_ID')
-SITE_URL = os.getenv('SITE_URL', 'https://elena-realtor.pages.dev')
-
-if not BOT_TOKEN or not ELENA_CHAT_ID:
-    raise ValueError("Не заданы BOT_TOKEN или ELENA_CHAT_ID!")
-
+# === НАСТРОЙКИ БОТА (жёстко прописаны) ===
+BOT_TOKEN = '7864111232:AAFVqAvCuvyP7SlT8jXRQjVgGV2i1O0w37Y'
+ELENA_CHAT_ID = '1033584084'
+SITE_URL = 'https://elena-realtor.pages.dev'
+# ==========================================
 # === Инициализация ===
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
@@ -433,4 +431,5 @@ def run_flask():
 if __name__ == '__main__':
     thread = threading.Thread(target=run_flask)
     thread.start()
+
     logger.info("🚀 Бот запущен на Hugging Face Spaces!")
